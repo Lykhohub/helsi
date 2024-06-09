@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HELSI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open Sans:wght@400;600&display=swap" />
+</head>
+<body>
+
+
+<header>
+    <div style="display: flex">
+        <img class="logo" src="assets/helsi-logo.svg">
+        <div class="city-selector">
+            <img src="assets\geo.png" class="geo">
+            <span id="selected-city">Київ</span>
+            <button class="city-menu-button" id="city-button">▼</button>
+        </div>
+    </div>
+
+    <div style="display: flex">
+        <div class="header-navigation">
+            <ul>
+                <li><button class="important">
+                    <span class="important-text">Важливо</span>
+                </button></li>
+                <li>Онлайн прийом</li>
+            </ul>
+            <ul>
+                <li><button class="new">
+                    <span class="new-text">Нове</span>
+                </button></li>
+                <li class="health-text">Дайжест здоров'я</li>
+            </ul>
+            <p>Замовлення ліків</p>
+            <p>Клініки</p>
+            <p>Вакцинація</p>
+            <p>Медична реформа</p>
+            <p>Про Helsi</p>
+        </div>
+        <button class="notification-button">
+            <img src="assets/bell.png" class="bell">
+        </button>
+        <button class="login-button">
+            <span class="login-text">УВІЙТИ</span>
+        </button>
+    </div>
+</header>
+
+
+<!--DROPDOWN MENU-->
+
+
+<div id="city-menu" class="city-menu">
+    <div class="menu-header">
+        <h3>Оберіть своє місто</h3>
+        <button id="close-menu">×</button>
+    </div>
+    <div class="cities">
+        <div class="city">Київ</div>
+        <div class="city">Дніпро</div>
+        <div class="city">Суми</div>
+        <div class="city">Запоріжжя</div>
+        <div class="city">Полтава</div>
+        <div class="city">Рівне</div>
+        <div class="city">Харків</div>
+        <div class="city">Чернівці</div>
+        <div class="city">Львів</div>
+        <div class="city">Одеса</div>
+        <div class="city">Біла Церква</div>
+        <div class="city">Кам'янське</div>
+    </div>
+    <div class="search-city">
+        <span>Або введіть інший населений пункт України</span>
+        <input type="text" placeholder="Почніть вводити назву населеного пункту...">
+    </div>
+</div>
+
+
+<!-- BODY CONTAINER 1-->
+
+
+<div class="container-background">
+    <h1 class="text-h1">Шукайте лікарів, клініки та ліки онлайн</h1>
+    <h2 class="text-h2">Записуйтесь на прийом не виходячи з дому</h2>
+    <div class="search-container">
+        <input list="choose-action" class="choose-action-input">
+        <datalist id="choose-action" class="choose-action-input-datalist">
+            <option value="Записатися до лікаря"></option>
+            <option value="Знайти клініку"></option>
+            <option value="Замовити ліки"></option>
+        </datalist>
+        <input type="search" class="search-specialist" placeholder="Введіть прізвище або спеціальність">
+        <button class="search-button">
+            <span class="search-text-button">Знайти</span>
+        </button>
+    </div>
+    <div class="container-for-containers">
+        <div class="column-1">
+            <div class="container-type-1">
+                <h3 class="head-container-1">Додаткові сервіси Helsi Plan</h3>
+                <div class="button-container">
+                    <img src="assets/arrow.png" class="arrow">
+                    <img src="assets/white-arrow.png" class="white-arrow">
+                </div>
+                <p class="paragraph-container-1">
+                    Новий рівень турботи
+                    про здоров'я
+                </p>
+                <div class="image-container">
+                    <div class="bubble-star-background">
+                    </div>
+                    <img src="assets/star.png" class="star">
+                </div>
+            </div>
+            <div class="container-type-2">
+                <h4 class="head-container-2">
+                    Рік здоров'я з Helsi
+                    <img src="assets/face_stars.png" class="face-stars">
+                </h4>
+                <div class="button-container">
+                    <img src="assets/arrow.png" class="arrow">
+                    <img src="assets/white-arrow.png" class="white-arrow">
+                </div>
+                <p class="paragraph-container-2">Дайджест пропозицій для вас</p>
+            </div>
+        </div>
+        <div class="column-2">
+            <div class="container-type-2">
+                <h4 class="head-container-2">
+                    Усі лікарі🧑&zwj;⚕️
+                </h4>
+                <div class="button-container">
+                    <img src="assets/arrow.png" class="arrow">
+                    <img src="assets/white-arrow.png" class="white-arrow">
+                </div>
+                <p class="paragraph-container-2">Запис до лікаря поруч з вами</p>
+            </div>
+            <div class="container-type-1">
+                <h3 class="head-container-1">Застосунок Helsi</h3>
+                <div class="button-container">
+                    <img src="assets/arrow.png" class="arrow">
+                    <img src="assets/white-arrow.png" class="white-arrow">
+                </div>
+                <p class="paragraph-container-1">
+                    Швидше, зручніше, ще більше
+                    медичних сервісів та
+                    пропозицій
+                    у застосунку</p>
+                <div class="image-container">
+                <img src="assets/mob-app.png" class="mob-app">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+<div class="text-h1-1">
+    <h1>Найчастіше шукають</h1>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
+
