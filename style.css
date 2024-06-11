@@ -148,6 +148,77 @@ header p {
 }
 
 
+/* --- dropdown menu --- */
+
+
+.city-selector {
+    font-family: var(--font);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+#selected-city {
+    margin-right: 10px;
+    color: var(--helsiBlue);
+}
+
+.city-menu {
+    display: none;
+    position: absolute;
+    top: 63px;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 20px;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: var(--font);
+}
+
+.city {
+    flex: 1 1 30%;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.city:hover {
+    background-color: #e0e0e0;
+}
+
+.search-city {
+    margin-top: 20px;
+}
+
+.search-city input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+}
+
+/* --- END Added CSS for City Selector --- */
+
+
 /* body */
 
 
@@ -160,16 +231,16 @@ header p {
 
 .text-h1 {
     color: var(--clickableBlack);
-    font-size: var(--h0);
-    font-weight: 550;
+    font-size: 48px;
+    font-weight: 600;
     font-family: var(--font);
     margin-top: 60px;
 }
 
 .text-h2 {
     color: var(--grayPrimary);
-    font-size: var(--h3);
-    font-weight: var(--semiBold);
+    font-size: 20px;
+    font-weight: 600;
     font-family: var(--font);
     margin-top: -20px;
 }
@@ -238,10 +309,27 @@ header p {
 
 .search-button:hover {
     background: var(--blueHover);
+    border: 1px solid var(--blueHover);
+    transition: all .3s ease-in;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
 }
 
 .search-button:active {
     background: var(--blueActive);
+    border: 1px solid var(--blueActive);
+}
+
+.search-button {
+    transition: all .3s ease-out;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
 }
 
 .search-text-button {
@@ -251,13 +339,6 @@ header p {
     font-size: 16px;
 }
 
-.text-h1-1 {
-    font-size: 30px;
-    text-align: center;
-    font-family: var(--font);
-}
-
-
 /*containers*/
 
 
@@ -265,7 +346,11 @@ header p {
     align-items: center;
     justify-content: center;
     display: flex;
-    padding-top: 60px;
+    padding-top: 71px;
+}
+
+.column-1, .column-2, .column-3, .column-4 {
+    height: 300px;
 }
 
 /*повторюванні елементи*/
@@ -279,9 +364,6 @@ header p {
     display: flex;
     align-items: center;
     justify-content: left;
-    position: absolute;
-    top: 16px;
-    right: 16px;
     z-index: 3;
 }
 
@@ -300,13 +382,33 @@ header p {
     position: absolute;
 }
 
+.search-card {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1;
+}
+
+.paragraph-container {
+    font-family: var(--font);
+    font-size: 14px;
+    text-align: left;
+    color: var(--grayPrimary)
+}
+
+p {
+    margin: 0 0;
+    line-height: 22px;
+}
+
 
 /*container 1*/
 
 
 .container-type-1 {
     height: 150px;
-    width: 252px;
+    width: 240px;
     border-radius: 8px;
     background: var(--white);
     padding: 16px;
@@ -317,24 +419,14 @@ header p {
 }
 
 .head-container-1 {
-    height: 56px;
+    height: auto;
     width: 216px;
     font-family: var(--font);
     color: #222222;
     font-size: 20px;
     text-align: left;
     margin: 0 0 8px;
-}
-
-.paragraph-container-1 {
-    font-family: var(--font);
-    font-size: 14px;
-    text-align: left;
-    color: var(--grayPrimary)
-}
-
-.paragraph-container-1 p {
-    line-height: 22px;
+    line-height: 140%;
 }
 
 .image-container {
@@ -344,7 +436,7 @@ header p {
     justify-content: center;
     display: flex;
     position: absolute;
-    bottom: -6px;
+    bottom: -4px;
     right: 16px;
 }
 
@@ -358,8 +450,25 @@ header p {
     z-index: 1;
 }
 
+.bubble-pills-background {
+    background-color: #e3e5fb;
+    opacity: 0.5;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
 .star {
     height: 40px;
+    position: relative;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.pills {
+    height: 63px;
     position: relative;
     object-fit: cover;
     z-index: 2;
@@ -387,9 +496,27 @@ header p {
     transition-property: all;
 }
 
+.container-type-1 {
+    transition: all .3s ease-out;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
 .container-type-1:hover .button-container{
     background-color: var(--bluePrimary);
     transition: all .3s ease-in;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.container-type-1 .button-container {
+    transition: all .3s ease-out;
     transition-behavior: normal;
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
@@ -407,10 +534,46 @@ header p {
     transition-property: all;
 }
 
+.container-type-1 .arrow{
+    transition: all .3s ease-out;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
 .container-type-1:hover .bubble-star-background {
-    background-color: var(--helsiBlueLight);
-    opacity: 0.3;
+    opacity: 1;
     transition: all .3s ease-in;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.container-type-1 .bubble-star-background {
+    transition: all .3s ease-out;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.container-type-1:hover .bubble-pills-background {
+    opacity: 1;
+    transition: all .3s ease-in;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.container-type-1 .bubble-pills-background {
+    transition: all .3s ease-out;
     transition-behavior: normal;
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
@@ -423,8 +586,8 @@ header p {
 
 
 .container-type-2 {
-    height: 58px;
-    width: 252px;
+    height: 50px;
+    width: 240px;
     border-radius: 8px;
     background: var(--white);
     padding: 12px 16px;
@@ -440,22 +603,12 @@ header p {
     font-size: 16px;
     text-align: left;
     margin: 0 0 5px;
+    line-height: 140%;
 }
 
 .face-stars {
     width: 16px;
     height: 16px;
-}
-
-.paragraph-container-2 {
-    font-family: var(--font);
-    font-size: 14px;
-    text-align: left;
-    color: var(--grayPrimary)
-}
-
-.paragraph-container-2 p {
-    line-height: 22px;
 }
 
 
@@ -465,6 +618,15 @@ header p {
 .container-type-2:hover {
     box-shadow: var(--boxShadowSearchCardHover);
     transition: all .3s ease-in;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.container-type-2 {
+    transition: all .3s ease-out;
     transition-behavior: normal;
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
@@ -482,6 +644,15 @@ header p {
     transition-property: all;
 }
 
+.container-type-2 .button-container{
+    transition: all .3s ease-out;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
 .container-type-2:hover .arrow{
     opacity: 0;
     transition: all .3s ease-in;
@@ -492,72 +663,289 @@ header p {
     transition-property: all;
 }
 
+.container-type-2 .arrow{
+    transition: all .3s ease-out;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
 
-/* --- dropdown menu --- */
 
-.city-selector {
+/*container 3*/
+
+
+.container-type-3 {
+    height: 94px;
+    width: 240px;
+    border-radius: 8px;
+    background: var(--white);
+    padding: 16px;
+    margin: 0 20px 24px 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--boxShadowSearchCard);
+}
+
+.head-container-3 {
+    height: auto;
+    width: 216px;
     font-family: var(--font);
-    display: flex;
+    color: #222222;
+    font-size: 16px;
+    text-align: left;
+    margin: 0 0 5px;
+    line-height: 140%;
+}
+
+.image-container-3 {
+    width: 75px;
+    height: 75px;
     align-items: center;
-    cursor: pointer;
-    margin-left: 20px;
-}
-
-#selected-city {
-    margin-right: 10px;
-    color: var(--helsiBlue);
-}
-
-.city-menu {
-    display: none;
+    justify-content: center;
+    display: flex;
     position: absolute;
-    top: 63px;
-    left: 20%;
-    transform: translateX(-50%);
-    width: 400px;
-    background-color: #fff;
-    border: 1px solid #dcdcdc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    padding: 20px;
+    bottom: 2px;
+    right: 16px;
 }
 
-.menu-header {
+.bubble-medicine-background {
+    background-color: #fff5ed;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+.bubble-declaration-background {
+    background-color: #f0fdd8;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+.prytula {
+    height: 40px;
+    position: relative;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.declarations {
+    height: 67px;
+    width: 76px;
+    position: relative;
+    object-fit: cover;
+    z-index: 2;
+}
+
+
+/*Стани*/
+
+
+.container-type-3:hover {
+    box-shadow: var(--boxShadowSearchCardHover);
+    transition: all .3s ease-in;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.container-type-3:hover .button-container{
+    background-color: var(--bluePrimary);
+    transition: all .3s ease-in;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.container-type-3:hover .arrow{
+    opacity: 0;
+    transition: all .3s ease-in;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.container-type-3:hover .bubble-medicine-background {
+    opacity: 1;
+    transition: all .3s ease-in;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.container-type-3:hover .bubble-declaration-background {
+    opacity: 1;
+    transition: all .3s ease-in;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.container-type-3 {
+    transition: all .3s ease-out;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.container-type-3 .button-container{
+    transition: all .3s ease-out;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.container-type-3 .arrow{
+    transition: all .3s ease-out;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.container-type-3 .bubble-medicine-background {
+    transition: all .3s ease-out;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.container-type-3 .bubble-declaration-background {
+    transition: all .3s ease-out;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+
+/*fldspfmsnfnsrpfnpsnf*/
+
+
+.container-often-in-search {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: center;
 }
 
-.cities {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.text-h2-1 {
+    padding-top: 80px;
+    margin-bottom: 52px;
+    font-size: 32px;
+    text-align: center;
     font-family: var(--font);
+    color: #222222;
+    line-height: 1.4;
+    font-weight: 600;
 }
 
-.city {
-    flex: 1 1 30%;
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 3px;
-    transition: background-color 0.3s;
+.container-for-circles {
+    height: 83px;
+    width: 132px;
+    margin: 0 6px;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
 }
 
-.city:hover {
-    background-color: #e0e0e0;
+.circle-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 56px;
+    width: 56px;
+    margin-bottom: 5px;
+    width: 56px;
 }
 
-.search-city {
-    margin-top: 20px;
+.circle-1 {
+    background-color: var(--bluePrimary);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.search-city input {
-    width: 90%;
-    padding: 10px;
-    border: 1px solid #dcdcdc;
-    border-radius: 5px;
+.circle-2 {
+    background-color: var(--green);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* --- END Added CSS for City Selector --- */
+.circle-3 {
+    background-color: var(--pink);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-4 {
+    background-color: var(--purple);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-1:hover {
+    background-color: var(--blueHover);
+}
+
+.circle-2:hover {
+    background-color: var(--greenHover);
+}
+
+.circle-3:hover {
+    background-color: var(--pinkHover);
+}
+
+.circle-4:hover {
+    background-color: var(--purpleHover);
+}
+
+.text-under-circle {
+    color: var(--grayPrimary);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: var(--font);
+    text-align: center;
+}
+
