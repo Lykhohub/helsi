@@ -10,6 +10,11 @@ header {
     justify-content: space-between;
     height: 62px;
     border-bottom: 1.5px solid var(--grayLine);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 100;
 }
 
 .logo {
@@ -223,7 +228,7 @@ header p {
 
 
 .container-background {
-    padding-top: 1px;
+    padding-top: 63.5px;
     text-align: center;
     height: 574px;
     background: var(--blue-pink);
@@ -855,7 +860,7 @@ p {
 }
 
 .text-h2-1 {
-    padding-top: 80px;
+    padding-top: 96px;
     margin-bottom: 52px;
     font-size: 32px;
     text-align: center;
@@ -947,5 +952,189 @@ p {
     line-height: 22px;
     font-family: var(--font);
     text-align: center;
+}
+
+
+/*ЯК ЗАПИСАТИСЬ ДО ЛІКАРЯ*/
+
+.step-h3 {
+    font-family: var(--font);
+    color: var(--grayPrimary);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0 0 25px;
+}
+
+.step-p {
+    font-family: var(--font);
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+}
+
+.step-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 0;
+}
+
+/*mgksrngpnsk;gnrk;w*/
+
+.container-for-steps {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/*1111111111111111111111111111111*/
+
+.step-1-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 399px;
+    width: 388px;
+    margin-right: 14px;
+}
+
+.step-1-image-container {
+    position: relative;
+    width: 374px;
+    height: 302px;
+}
+
+.step-1-bubble {
+    border-radius: 50%;
+    background: var(--yellow-pink);
+    height: 184px;
+    left: 0;
+    top: 0;
+    transform: rotate(-90deg);
+    width: 184px;
+    z-index: 1;
+    position: absolute;
+}
+
+.step-1 {
+    margin-top: 30px;
+    width: 369px;
+    height: 272px;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/*222222222222222222222222*/
+
+
+.step-2-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 399px;
+    width: 268px;
+    margin-left: 26px;
+    margin-right: 50px;
+}
+
+.step-2-image-container {
+    position: relative;
+    display: flex;
+    width: 268px;
+    height: 302px;
+}
+
+.step-2-bubble {
+    border-radius: 50%;
+    background: var(--blue-pink);
+    height: 184px;
+    left: 0;
+    top: 0;
+    transform: rotate(-90deg);
+    width: 184px;
+    z-index: 1;
+    position: absolute;
+}
+
+.step-2 {
+    margin-top: 49px;
+    margin-left: 29px;
+    width: 239px;
+    height: 188px;
+    z-index: 2;
+}
+
+
+/*333333333333333333333333333*/
+
+
+.step-3-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 399px;
+    width: 262px;
+    margin-left: 64px;
+}
+
+.step-3-image-container {
+    position: relative;
+    display: flex;
+    width: 262px;
+    height: 302px;
+}
+
+.step-3-bubble-1 {
+    border-radius: 50%;
+    background: var(--yellow-pink);
+    transform: rotate(-90deg);
+    width: 58px;
+    height: 58px;
+    left: 0;
+    top: 133px;
+    position: absolute;
+    z-index: 1;
+}
+
+.step-3-bubble-2 {
+    border-radius: 50%;
+    background: var(--yellow-pink);
+    transform: rotate(-90deg);
+    width: 193px;
+    height: 193px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    position: absolute;
+}
+
+.step-3 {
+    margin-top: 9px;
+    width: 182px;
+    height: 249px;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 37px;
+}
+
+.arrow-container {
+    width: 24px;
+    height: 399px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 

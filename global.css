@@ -1,7 +1,9 @@
 :root {
     --blue-pink: linear-gradient(98.66deg,#d6e9ff 2.52%,#ffddf7);
+    --yellow-pink: linear-gradient(98.66deg,#ffe6c0 2.52%,#ffd8eb);
     --text-color: #585f73;
     --white: #fff;
+    --black: #000;
     --clickableBlack: #222;
     --grayMiddle: #d7dae0;
     --grayPrimary: #3e3e3e;
