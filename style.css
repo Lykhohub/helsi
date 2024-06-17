@@ -301,18 +301,21 @@ header p {
     font-color: var(--text-color);
 }
 
-
-.search-button {
+.search-container .button {
     margin-left: 16px;
+}
+
+.button {
     background: var(--bluePrimary);
     height: 39.6px;
-    width: 94px;
+    width: auto;
     align-items: center;
     border-radius: 8px;
     border: 1px solid var(--bluePrimary);
+    padding: 7px 16px;
 }
 
-.search-button:hover {
+.button:hover {
     background: var(--blueHover);
     border: 1px solid var(--blueHover);
     transition: all .3s ease-in;
@@ -323,12 +326,12 @@ header p {
     transition-property: all;
 }
 
-.search-button:active {
+.button:active {
     background: var(--blueActive);
     border: 1px solid var(--blueActive);
 }
 
-.search-button {
+.button {
     transition: all .3s ease-out;
     transition-behavior: normal;
     transition-duration: 0.3s;
@@ -337,11 +340,12 @@ header p {
     transition-property: all;
 }
 
-.search-text-button {
+.text-button {
     color: var(--white);
     font-family: var(--font);
-    font-weight: bold;
     font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
 }
 
 /*containers*/
@@ -1136,5 +1140,230 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/*ADVANTAGES*/
+
+.advantages-container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1190px;
+    width: 100%;
+}
+
+.advantages_grid {
+    grid-gap: 20px;
+    display: grid;
+    grid-template-areas:
+        "container1 container1 container1 container2 container3 container3"
+        "container1 container1 container1 container5 container5 container5"
+        "container4 container4 container4 container5 container5 container5";
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+}
+
+.advantages {
+    align-items: flex-start;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    min-height: 187px;
+    width: 100%;
+}
+
+.advantages.advantages-container-1 {
+    background: 100% 100% / contain no-repeat url(assets/search-doctors.png);
+    background-color: var(--blueBg);
+    grid-area: container1;
+    padding: 36px 32px;
+}
+
+.advantages-1-h2 {
+    color: var(--clickableBlack);
+    font-size: 24px;
+    margin: 0 0 6px;
+    font-weight: 700;
+    line-height: 1.4;
+    font-family: var(--font);
+}
+
+.advantages-1-p {
+    color: var(--grayPrimary);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: auto;
+    line-height: 22px;
+    font-family: var(--font);
+
+}
+
+.advantages.advantages-1 .button {
+    margin: 30px 0 0;
+}
+
+.advantages.advantages-container-2 {
+    grid-area: container2;
+    background-color: var(--purpleLight);
+    padding: 32px 20px;
+}
+
+.advantages-2-span {
+    color: var(--clickableBlack);
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 auto;
+}
+
+.advantages.advantages-container-2 .button-container {
+    height: 40px;
+    width: 40px;
+    background-color: var(--purpleLight);
+}
+
+.advantages.advantages-container-2 .arrow {
+    width: 27px;
+    height: 20px;
+    margin-left: -2px;
+}
+
+.advantages.advantages-container-2 .white-arrow {
+    width: 27px;
+    height: 20px;
+    margin-left: -2px;
+}
+
+.advantages.advantages-container-2 .button-container:hover {
+    background-color: var(--bluePrimary);
+    transition: all .3s ease-in;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.advantages.advantages-container-2 .button-container {
+    transition: all .3s ease-out;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.advantages.advantages-container-2 .button-container:hover .arrow{
+    opacity: 0;
+    transition: all .3s ease-in;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.advantages.advantages-container-2 .button-container .arrow{
+    transition: all .3s ease-out;
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.advantages.advantages-container-3 {
+    grid-area: container3;
+    background-color: var(--greenLight);
+    padding: 32px 24px;
+    display: flex;
+}
+
+.advantages-3-span {
+    color: var(--clickableBlack);
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 16px;
+}
+
+.advantages-3-p {
+    color: var(--grayPrimary);
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-top: 16px;
+    margin-bottom: auto;
+}
+
+.advantages.advantages-container-4 {
+    grid-area: container4;
+    background-color: var(--purpleLight);
+    padding: 32px 24px;
+}
+
+.advantages-4-span {
+    color: var(--clickableBlack);
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 16px;
+}
+
+.advantages-4-p {
+    color: var(--grayPrimary);
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-top: 16px;
+    margin-bottom: auto;
+}
+
+.advantages.advantages-container-5 {
+    grid-area: container5;
+    background-color: var(--pinkLight);
+    overflow: hidden;
+    padding: 36px 32px;
+    position: relative;
+}
+
+.advantages-5-h2 {
+    color: var(--clickableBlack);
+    font-size: 24px;
+    margin: 0 0 6px;
+    font-weight: 700;
+    line-height: 1.4;
+    font-family: var(--font);
+}
+
+.advantages-5-p {
+    color: var(--grayPrimary);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: auto;
+    line-height: 22px;
+    font-family: var(--font);
+}
+
+.advantages.advantages-5 .button {
+    margin: 30px 0 0;
+}
+
+.advantages.advantages-5 image {
+    vertical-align: middle;
+    display: inline-block;
+    max-height: 268px;
+    width: auto;
+}
+
+.advantages-5-image {
+    display: block;
 }
 
