@@ -1,6 +1,8 @@
 :root {
     --blue-pink: linear-gradient(98.66deg,#d6e9ff 2.52%,#ffddf7);
     --yellow-pink: linear-gradient(98.66deg,#ffe6c0 2.52%,#ffd8eb);
+    --blue-pink-opacity60: linear-gradient(98.66deg,rgba(214,233,255,.6) 2.52%,rgba(255,221,247,.6));
+    --blue-pink-hover: linear-gradient(238.03deg,#f9c8f0 12.26%,#bcdeff 93.17%);
     --text-color: #585f73;
     --white: #fff;
     --black: #000;
