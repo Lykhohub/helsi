@@ -1636,3 +1636,123 @@ p {
     font-size: 14px;
     font-weight: 400;
 }
+
+/*FOOTERRRRRRRRRRRRRRRRRRRRRRRRRR*/
+
+footer {
+    padding: 46px 132px;
+}
+
+.footer-container {
+    justify-content: space-between;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0;
+    max-width: 1255.2px;
+    margin: 0 0;
+}
+
+.footer-image-container {
+    display: block;
+    flex: 0 0 88px;
+}
+
+.logo-footer {
+    height: 88px;
+    width: 88px;
+}
+
+.footer-text-container-1 {
+    flex: 0 0 180px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-p {
+    color: var(--clickableBlack);
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    text-align: left;
+}
+
+.footer-span {
+    color: var(--clickableBlack);
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.footer-span-blue {
+    color: var(--bluePrimary);
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: left;
+    cursor: pointer;
+}
+
+.footer-span:hover {
+    color: var(--blueHover);
+    transition: all .3s ease-in;
+}
+
+.footer-span-blue:hover {
+    color: var(--blueHover);
+    transition: all .3s ease-in;
+}
+
+.footer-text-container-2 {
+    flex: 0 0 210px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-button-container {
+    flex: 0 0 166px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-download-buttons-container {
+    gap: 16px;
+    justify-content: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    line-height: 0;
+
+}
+
+.footer-bottom {
+    padding-top: 35px;
+    flex-flow: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    border-top: 1px solid var(--grayLine);
+    display: flex;
+    gap: 16px;
+}
+
+.footer-span-bottom {
+    font-family: var(--font);
+    color: var(--graySecondary);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.social-media {
+    display: flex;
+    gap: 12px;
+}
